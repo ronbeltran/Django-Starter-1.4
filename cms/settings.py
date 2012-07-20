@@ -132,6 +132,18 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.csrf',
+    'cms.context_processor.default',
+)
+
 SITE_TITLE = 'Django'
 SITE_DESCRIPTION = 'Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design'
 
