@@ -1,13 +1,20 @@
-Django 1.4 Project Template
-===========================
+#Django 1.4 Project Template
 
-1. git clone https://github.com/ronbeltran/Django-Starter-1.4    # Clone the repository
-2. cd Django-Starter-1.4                                         # Change into the directory
-3. virtualenv root                                               # Create Virtual Environment for development
-4. . root/bin/activate                                           # Activate the Virtual Environment
-5. pip install -r requirements.txt                               # Install needed packages
-6. python manage.py syncdb                                       # Sync the database
-7. python manage.py runserver                                    # Visit http://localhost:8000/ 
+##Usage
+Clone the repository
+    $ git clone https://github.com/ronbeltran/Django-Starter-1.4
+Change into the directory
+    $ cd Django-Starter-1.4
+Create Virtual Environment for development
+    $ virtualenv root
+Activate the Virtual Environment
+    $ . root/bin/activate
+Install needed packages
+    $ pip install -r requirements.txt
+Sync the database
+    $ python manage.py syncdb
+Visit http://localhost:8000/
+    $ python manage.py runserver
 
 
 You might want to build something useful with it. **Have fun!**
