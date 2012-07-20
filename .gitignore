@@ -3,4 +3,5 @@
 *.pyc
 *.swp
 local_settings.py
+cms.sqlite3
 root
