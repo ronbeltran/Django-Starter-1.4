@@ -1,11 +1,12 @@
-# Django settings for cms project.
+# -*- coding: utf-8 -*-
+
 import os.path
 import sys
 
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
-DEBUG = False 
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -16,12 +17,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                       # Or path to database file if using sqlite3.
+        'USER': '',                       # Not used with sqlite3.
+        'PASSWORD': '',                   # Not used with sqlite3.
+        'HOST': '',                       # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                       # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -161,11 +162,21 @@ LOGGING = {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
+    'formatters': {
+        'simple': {
+            'format': '%(module)s:%(levelname)s: %(message)s'
+        }
+    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
         }
     },
     'loggers': {
@@ -174,6 +185,10 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'cms.custom': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        }
     }
 }
 
@@ -184,4 +199,3 @@ except NameError:
         from local_settings import *
     except ImportError:
         pass
-

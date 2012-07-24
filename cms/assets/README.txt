@@ -1,0 +1,1 @@
+Don't put anything in this directory yourself, it'll be populated when you run collectstatic.

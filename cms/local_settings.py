@@ -1,4 +1,5 @@
 DEBUG = True
+LOCAL_SETTINGS = True
 
 DATABASES = {
     'default': {

@@ -2,5 +2,5 @@
 *.pot
 *.pyc
 *.swp
-cms.sqlite3
+*.sqlite3
 root
