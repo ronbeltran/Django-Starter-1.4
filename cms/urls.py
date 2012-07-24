@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'cms.views.home', name='home'),
+    url(r'^$', 'cms.views.home', name='home'),
     # url(r'^cms/', include('cms.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
